@@ -1,0 +1,2 @@
+# myblog
+Small blog application
