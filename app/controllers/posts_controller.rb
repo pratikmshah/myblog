@@ -21,7 +21,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to @post
     else
-      redirect_to new_post(@post)
+      render 'new'
     end
   end
 
@@ -33,8 +33,8 @@ class PostsController < ApplicationController
 
   private #========= PRIVATE
 
-  def post_params
-    params.require(:post).permit(:title, :content)
-  end
+    def post_params
+      params.require(:post).permit(:title, :content)
+    end
 
 end
