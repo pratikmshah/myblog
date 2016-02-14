@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(version: 20160213230757) do
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
-    t.string   "commenter"
+    t.string   "commenter",  default: "anonymous"
     t.text     "body"
     t.integer  "post_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
   end
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
