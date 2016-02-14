@@ -1,7 +1,7 @@
 <%= form_for :user, url: '/login' do |f| %>
   <p>
     <%= f.label :username %><br>
-    <%= f.text_field :username %>
+    <%= text_field_tag :username %>
   </p>
 
   <p>
@@ -10,6 +10,6 @@
   </p>
 
   <p>
-    <%= f.submit %>
+    <%= f.submit :Login %>
   </p>
 <% end %>
