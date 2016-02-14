@@ -20,7 +20,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-
+    @post.content = @post.content.html_safe
     if @post.save
       redirect_to @post
     else
