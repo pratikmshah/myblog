@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
 
+  before_action :is_admin?, only: [:destroy]
+
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create(comment_params)
