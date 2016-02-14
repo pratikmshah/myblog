@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
 
+  before_action :is_admin?, only: [:admin]
+
   def new
   end
 
@@ -12,6 +14,7 @@ class SessionsController < ApplicationController
     end
     if authenticated_user                                           # if authenticated create session cookie
       session[:user_id] = user.id
+      session[:admin] = user.admin
       flash[:notice] = "Welcome #{user.username.capitalize}"
       redirect_to '/'
     else                                                            # otherwise retry login
@@ -28,6 +31,8 @@ class SessionsController < ApplicationController
   end
 
   def admin
+    # dashboard to create, edit, delete posts
+    # also create users with admin ability
   end
 
 end
