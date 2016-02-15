@@ -19,14 +19,15 @@ $(function(){
   // edit form text when user clicks on comment
   $('h3').on('click', viewCommentForm, function(e) {
     e.preventDefault();
-    $(viewCommentForm).text(toggleLinkText($(viewCommentForm)));  // set text depending on current text
+    changeFormText(viewCommentForm); // set text depending on current text
   });
 
   // remove comments form when user submits
   $(commentForm).on('submit', newComment, function(e) {
     e.preventDefault();
-    toggleLink(commentForm);
-    $(viewCommentForm).text(toggleLinkText($(viewCommentForm)));
+    clearFormText();                                      // clear form contents
+    toggleLink(commentForm);                              // remove form from view
+    changeFormText(viewCommentForm);                      // toggle link/button text
   });
 
 });
@@ -43,4 +44,14 @@ function toggleLinkText(linkText) {
   text = linkText.text();
   var text = text === "Add a comment" ? "Cancel comment" : "Add a comment";
   return text;
+}
+
+// change text on comment form link/button
+function changeFormText(form) {
+  $(form).text(toggleLinkText($(form)));
+}
+
+// clear tiny mce form text after user submits
+function clearFormText() {
+  tinyMCE.activeEditor.setContent('');
 }
