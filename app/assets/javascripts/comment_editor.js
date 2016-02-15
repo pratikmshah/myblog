@@ -4,7 +4,6 @@ $(function(){
   tinymce.init({
     selector: '#comment_editor',
     width: 600,
-    height: 300,
     menubar: false,
     plugins: [
       'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
