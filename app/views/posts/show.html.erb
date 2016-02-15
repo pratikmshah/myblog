@@ -11,8 +11,10 @@
 <h2>Comments</h2>
 <%= render @post.comments %>
 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+<h2><a href="#" id="view-comment-form">Add a comment</a></h2>
+<div id="comment-form">
+  <%= render 'comments/form' %>
+</div>
 
 <%= link_to 'Edit', edit_post_path(@post) %>
 <%= link_to 'Back', posts_path %>
