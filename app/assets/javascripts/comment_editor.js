@@ -2,9 +2,10 @@ $(function(){
 
   // initialize tinymce object for posts editor
   tinymce.init({
-    selector: '#post_editor',
+    selector: '#comment_editor',
     width: 600,
     height: 300,
+    menubar: false,
     plugins: [
       'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
       'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
@@ -14,4 +15,3 @@ $(function(){
   });
 
 });
-
