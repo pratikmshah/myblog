@@ -8,11 +8,11 @@
     <% if admin? %>
       <%= link_to 'New Post', new_post_path %>
     <% end %>
-  <div>
+  <div class="grid-container">
     <% @posts.each do |post| %>
-      <div class="grid-bckgrd fnt-clr pad-mar">
+      <div class="block">
         <h3 class="text-center"> <%= post.title %> </h3>
-        <h5><em class="date"> <%= post.updated_at.strftime("%b %d. %Y") %> </em></h5>
+        <h5 class="text-center"><em class="date"> <%= post.updated_at.strftime("%b %d. %Y") %> </em></h5>
         <p>
           <%= post.content.html_safe %>
          <div><%= link_to 'Read more', post_path(post) %></div>

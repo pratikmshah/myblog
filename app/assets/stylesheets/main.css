@@ -12,22 +12,17 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-
 /* CLASSES FOR EACH GRID */
 .date {
   font-weight: 300;
   font-style: italic;
 }
 
-.grid-bckgrd {
+.block {
   background-color: black;
-}
-
-.fnt-clr {
   color: white;
-}
-
-.pad-mar {
+  display: inline-block;
+  width: 250px;
   padding: 1em;
   margin: 1em;
 }
