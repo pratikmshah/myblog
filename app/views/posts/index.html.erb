@@ -1,19 +1,16 @@
 <section id="posts" class="container">
     <div class="text-center">
       <span class="notice">
-      <% if flash[:notice] %>
-        <%= flash[:notice] %>
-      <% end %>
+        <% if flash[:notice] %>
+          <%= flash[:notice] %>
+        <% end %>
       </span>
-      <% if admin? %>
-        <%= link_to 'New Post', new_post_path %>
-      <% end %>
     </div>
   <div class="grid-container">
     <% @posts.reverse_each do |post| %>
       <div class="block">
         <h3 class="text-center"> <%= post.title %> </h3>
-        <h5 class="text-center"><em class="date"> <%= post.updated_at.strftime("%b %d. %Y") %> </em></h5>
+        <h5 class="text-center"><em class="date"> <%= post.created_at.strftime("%b %d. %Y") %> </em></h5>
         <p>
           <%= extract_paragraph(post.content) %>
          <div class="text-center"><%= link_to 'READ FULL ARTICLE', post_path(post), :class => "read-lnk" %></div>

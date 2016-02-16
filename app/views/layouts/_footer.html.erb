@@ -1,0 +1,23 @@
+<footer>
+  <div class="text-center">
+    <hr>
+    <p>
+      Copyright Pratik Shah © 2016
+    </p>
+    <% if session[:user_id] %>
+      <%= link_to '', :logout, :class => "glyphicon glyphicon-log-out" %>
+    <% else %>
+      <%= link_to '', :login, :class =>"glyphicon glyphicon-user" %>
+    <% end %>
+    <% if admin? %>
+      <%= link_to '', new_post_path, :class => "glyphicon glyphicon-file" %>
+    <% end %>
+    <ul class="social-lnks">
+      <li><a href="https://twitter.com/pratikshah"><%= image_tag('icons/twt.png', :size => "22x22") %></a></li>
+      <li><a href="https://www.linkedin.com/in/pratikmshah"><%= image_tag('icons/in.png', :size => "22x22") %></a></li>
+      <li><a href="https://github.com/pratikmshah"><%= image_tag('icons/git.png', :size => "22x22") %></a></li>
+      <li><a href="mailto:pratik.t.shah@gmail.com?Subject=Hello"><%= image_tag('icons/email.png', :size => "22x22") %></a></li>
+    </ul>
+  </div>
+</footer>
+

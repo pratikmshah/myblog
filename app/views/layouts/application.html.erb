@@ -17,17 +17,6 @@
 
 </body>
 
-<footer>
-  <div class="text-center">
-    <hr>
-    <p>
-      Copyright Pratik Shah © 2016
-    </p>
-    <% if session[:user_id] %>
-      <%= link_to '', :logout, :class => "glyphicon glyphicon-log-out" %>
-    <% else %>
-      <%= link_to '', :login, :class =>"glyphicon glyphicon-user" %>
-    <% end %>
-  </div>
-</footer>
+<%= render 'layouts/footer' %>
+
 </html>
