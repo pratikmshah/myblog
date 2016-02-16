@@ -15,15 +15,17 @@
         <h5 class="text-center"><em class="date"> <%= post.updated_at.strftime("%b %d. %Y") %> </em></h5>
         <p>
           <%= extract_paragraph(post.content) %>
-         <div><%= link_to 'Read more', post_path(post) %></div>
+         <div class="text-center"><%= link_to 'READ FULL ARTICLE', post_path(post), :class => "read-lnk" %></div>
         </p>
         <% if admin? %>
-          <span>
-                 <%= link_to 'Edit', edit_post_path(post) %>
-                 <%= link_to 'Delete', post_path(post),
-                                       method: :delete,
-                                       data: { confirm: 'Delete?' }%>
-          </span>
+          <div class="text-center">
+            <span>
+                   <%= link_to 'Edit', edit_post_path(post) %>
+                   <%= link_to 'Delete', post_path(post),
+                                         method: :delete,
+                                         data: { confirm: 'Delete?' }%>
+            </span>
+          </div>
         <% end %>
       </div>
     <% end %>

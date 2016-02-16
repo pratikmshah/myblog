@@ -26,3 +26,19 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1em;
   margin: 1em;
 }
+
+a.read-lnk {
+  text-decoration: none;
+  margin-top: 5px;
+  padding: 5px;
+  font-size: 12px;
+  color: white;
+  border: 1px solid #55ACEE;
+  background-color: #55ACEE;
+}
+
+a.read-lnk:hover{
+  background-color: black;
+  border: 1px solid #55ACEF;
+  color: #55ACEF;
+}
