@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100italic,700,300italic);
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Roboto';
+}
+
+p {
+  font-weight: 100;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+
+/* CLASSES FOR EACH GRID */
+.date {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.grid-bckgrd {
+  background-color: black;
+}
+
+.fnt-clr {
+  color: white;
+}
+
+.pad-mar {
+  padding: 1em;
+  margin: 1em;
+}
