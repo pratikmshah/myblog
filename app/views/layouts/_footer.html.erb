@@ -13,10 +13,22 @@
       <%= link_to '', new_post_path, :class => "glyphicon glyphicon-file" %>
     <% end %>
     <ul class="social-lnks">
-      <li><a href="https://twitter.com/pratikshah"><%= image_tag('icons/twt.png', :size => "22x22") %></a></li>
-      <li><a href="https://www.linkedin.com/in/pratikmshah"><%= image_tag('icons/in.png', :size => "22x22") %></a></li>
-      <li><a href="https://github.com/pratikmshah"><%= image_tag('icons/git.png', :size => "22x22") %></a></li>
-      <li><a href="mailto:pratik.t.shah@gmail.com?Subject=Hello"><%= image_tag('icons/email.png', :size => "22x22") %></a></li>
+      <li><a href="https://twitter.com/pratikshah" class="con-t">
+          <%= image_tag('icons/twt.png', :size => "22x22") %>
+          <%= image_tag('icons/tweet.png', :size => "22x22") %>
+      </a></li>
+      <li><a href="https://www.linkedin.com/in/pratikmshah" class="con-in">
+          <%= image_tag('icons/in.png', :size => "22x22") %>
+          <%= image_tag('icons/lnkin.png', :size => "22x22") %>
+      </a></li>
+      <li><a href="https://github.com/pratikmshah" class="con-gh">
+          <%= image_tag('icons/git.png', :size => "22x22") %>
+          <%= image_tag('icons/cat.png', :size => "22x22") %>
+      </a></li>
+      <li><a href="mailto:pratik.t.shah@gmail.com?Subject=Hello" class="con-em">
+          <%= image_tag('icons/email.png', :size => "22x22") %>
+          <%= image_tag('icons/mail.png', :size => "22x22") %>
+      </a></li>
     </ul>
   </div>
 </footer>

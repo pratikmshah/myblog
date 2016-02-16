@@ -68,3 +68,45 @@ a.read-lnk:hover{
   list-style-type: none;
   padding: 3px;
 }
+
+/* icons that will interchange pictures on hover */
+.con-em img:last-child {
+  display: none;
+}
+.con-em:hover img:first-child {
+  display: none;
+}
+.con-em:hover img:last-child {
+  display: inline-block;
+}
+
+.con-in img:last-child {
+  display: none;
+}
+.con-in:hover img:first-child {
+  display: none;
+}
+.con-in:hover img:last-child {
+  display: inline-block;
+}
+
+.con-t img:last-child {
+  display: none;
+}
+.con-t:hover img:first-child {
+  display: none;
+}
+.con-t:hover img:last-child {
+  display: inline-block;
+}
+
+.con-gh img:last-child {
+  display: none;
+}
+.con-gh:hover img:first-child {
+  display: none;
+}
+.con-gh:hover img:last-child {
+  display: inline-block;
+}
+/* END OF FOOTER */
