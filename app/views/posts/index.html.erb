@@ -1,9 +1,11 @@
 <section id="posts" class="container">
   <h1 class="text-center">Hello World!</h1>
     <div class="text-center">
+      <span class="notice">
       <% if flash[:notice] %>
         <%= flash[:notice] %>
       <% end %>
+      </span>
       <% if admin? %>
         <%= link_to 'New Post', new_post_path %>
       <% end %>

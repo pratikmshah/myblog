@@ -22,9 +22,9 @@
       Copyright Pratik Shah © 2016
     </p>
     <% if session[:user_id] %>
-      <%= link_to 'logout', :logout %>
+      <%= link_to '', :logout, :class => "glyphicon glyphicon-log-out" %>
     <% else %>
-      <%= link_to 'login', :login %>
+      <%= link_to '', :login, :class =>"glyphicon glyphicon-user" %>
     <% end %>
   </div>
 </footer>
