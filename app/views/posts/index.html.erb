@@ -1,13 +1,10 @@
-<div>
+<section id="posts">
   <div>
     <% if flash[:notice] %>
       <%= flash[:notice] %>
     <% end %>
   </div>
-</div>
-
-<section id="posts">
-  <h1>Recent Posts</h1>
+  <h1>My Blog!</h1>
     <% if admin? %>
       <%= link_to 'New Post', new_post_path %>
     <% end %>
@@ -15,6 +12,7 @@
     <% @posts.each do |post| %>
       <div>
         <h3> <%= post.title %> </h3>
+        <h5><em> <%= post.updated_at.strftime("%b %d. %Y") %> </em></h5>
         <p>
           <%= post.content.html_safe %>
          <div><%= link_to 'Show', post_path(post) %></div>
