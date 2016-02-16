@@ -52,10 +52,16 @@ a.read-lnk:hover{
 
 /* END OF GRID */
 
+/* HEADER CSS */
 .notice {
   color: red;
 }
 
+.title {
+  color: #55ACEE;
+  font-size: 48px;
+}
+/* END OF HEADER CSS */
 
 /* FOOTER CSS */
 .social-lnks {
