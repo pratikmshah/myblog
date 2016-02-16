@@ -1,5 +1,5 @@
 <section id="posts" class="container">
-  <h1 class="text-center">My Blog!</h1>
+  <h1 class="text-center">Hello World!</h1>
     <div class="text-center">
       <% if flash[:notice] %>
         <%= flash[:notice] %>
@@ -14,7 +14,7 @@
         <h3 class="text-center"> <%= post.title %> </h3>
         <h5 class="text-center"><em class="date"> <%= post.updated_at.strftime("%b %d. %Y") %> </em></h5>
         <p>
-          <%= post.content.html_safe %>
+          <%= extract_paragraph(post.content) %>
          <div><%= link_to 'Read more', post_path(post) %></div>
         </p>
         <% if admin? %>
