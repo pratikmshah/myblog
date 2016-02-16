@@ -30,9 +30,4 @@ class SessionsController < ApplicationController
     redirect_to '/'
   end
 
-  def admin
-    # dashboard to create, edit, delete posts
-    # also create users with admin ability
-  end
-
 end

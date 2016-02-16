@@ -12,4 +12,15 @@
 <%= yield %>
 
 </body>
+
+<footer>
+  <div>
+    <br>
+    <% if session[:user_id] %>
+      <%= link_to 'logout', :logout %>
+    <% else %>
+      <%= link_to 'login', :login %>
+    <% end %>
+  </div>
+</footer>
 </html>
