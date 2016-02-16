@@ -1,15 +1,15 @@
 <section id="posts" class="container">
-  <div>
-    <% if flash[:notice] %>
-      <%= flash[:notice] %>
-    <% end %>
-  </div>
-  <h1>My Blog!</h1>
-    <% if admin? %>
-      <%= link_to 'New Post', new_post_path %>
-    <% end %>
+  <h1 class="text-center">My Blog!</h1>
+    <div class="text-center">
+      <% if flash[:notice] %>
+        <%= flash[:notice] %>
+      <% end %>
+      <% if admin? %>
+        <%= link_to 'New Post', new_post_path %>
+      <% end %>
+    </div>
   <div class="grid-container">
-    <% @posts.each do |post| %>
+    <% @posts.reverse_each do |post| %>
       <div class="block">
         <h3 class="text-center"> <%= post.title %> </h3>
         <h5 class="text-center"><em class="date"> <%= post.updated_at.strftime("%b %d. %Y") %> </em></h5>
