@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100italic,700,300italic);
 
+footer {
+  min-height: 100px;
+}
+
+
 h1, h2, h3, h4, h5, h6, p {
   font-family: 'Roboto';
 }
@@ -42,3 +47,6 @@ a.read-lnk:hover{
   border: 1px solid #55ACEF;
   color: #55ACEF;
 }
+
+/* END OF GRID */
+
