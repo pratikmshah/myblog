@@ -9,6 +9,7 @@
       <div class="reset-font">
         <%= @post.content.html_safe %>
         <%= link_to '', posts_path, :class => "glyphicon glyphicon-arrow-left" %>
+        <span class="mrg-lft-rgt"></span>
         <% if admin? %>
           <%= link_to '', edit_post_path(@post), :class => "glyphicon glyphicon-edit"  %>
         <% end %>

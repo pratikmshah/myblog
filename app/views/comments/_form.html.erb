@@ -1,11 +1,11 @@
 <%= form_for([@post, @post.comments.build], remote: true) do |f| %>
   <p>
     <%= f.label :commenter %><br>
-    <%= f.text_field :commenter %>
+    <%= f.text_field :commenter, :class => "col-xs-3" %>
   </p>
 
   <p>
-    <%= f.label :body %><br>
+    <br>
     <%= f.text_area :body, :id => 'comment_editor' %>
   </p>
 
