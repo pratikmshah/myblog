@@ -1,11 +1,10 @@
-<div>
+<div id="comment-<%= comment.id %>" class="comment-box">
   <p>
-    <strong>Commenter:</strong>
+    <strong>Post by:</strong>
     <%= comment.commenter %>
   </p>
 
   <p>
-    <strong>Comment:</strong>
     <%= comment.body.html_safe %>
   </p>
 
