@@ -1,15 +1,21 @@
-<%= form_for :user, url: '/login' do |f| %>
-  <p>
-    <%= f.label :username %><br>
-    <%= text_field_tag :username %>
-  </p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+      <%= form_for :user, :html => { url: '/login', :role => 'form', :class => 'form-width' } do |f| %>
+        <div class='form-group'>
+          <%= f.label :username, :class => 'sr-only' %>
+          <%= text_field_tag :username, '', :class => 'form-control' %>
+        </div>
 
-  <p>
-    <%= f.label :password %><br>
-    <%= password_field_tag :password %>
-  </p>
+        <div class='form-group'>
+          <%= f.label :password, :class => 'sr-only' %>
+          <%= password_field_tag :password, '', :class => 'form-control'  %>
+        </div>
 
-  <p>
-    <%= f.submit :Login %>
-  </p>
-<% end %>
+        <div class='form-group'>
+          <%= f.submit :Login, :class => 'form-control btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
