@@ -18,11 +18,14 @@ p {
   font-weight: 100;
 }
 
+.glyphicon {
+  font-size: 1.25em;
+}
+
 /* CLASSES FOR EACH GRID */
 .date {
   font-weight: 300;
-  font-style: italic;
-  color: gray;
+  color: #9EABB3;
 }
 
 .block {

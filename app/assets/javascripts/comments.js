@@ -7,17 +7,18 @@ $(function(){
   var viewCommentForm = '#view_comment_form';
   var commentForm = '#comment_form';
   var newComment = '#new_comment';
+  var selector = 'h4';
 
   toggleLink(commentForm);  // initially hide comment form
 
   // show/hide form when user clicks on comment
-  $('h3').on('click', viewCommentForm, function(e) {
+  $(selector).on('click', viewCommentForm, function(e) {
     e.preventDefault();
     toggleLink(commentForm);
   });
 
   // edit form text when user clicks on comment
-  $('h3').on('click', viewCommentForm, function(e) {
+  $(selector).on('click', viewCommentForm, function(e) {
     e.preventDefault();
     changeFormText(viewCommentForm); // set text depending on current text
   });
@@ -42,7 +43,7 @@ function toggleLink(selector) {
 // toggle text on link/button depending on what is currently set
 function toggleLinkText(linkText) {
   text = linkText.text();
-  var text = text === "Add a comment" ? "Cancel comment" : "Add a comment";
+  var text = text === "+Comment" ? "-Cancel" : "+Comment";
   return text;
 }
 

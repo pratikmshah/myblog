@@ -1,23 +1,41 @@
-<p>
-  <%= @post.title %>
-  <h5><em> <%= @post.updated_at.strftime("%b %d. %Y") %> </em></h5>
-</p>
+<section class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <p>
+        <h5 class="date reset-marg"> <%= @post.updated_at.strftime("%b %d. %Y") %> </h5>
+        <h1 class="reset-marg"><%= @post.title %></h1>
+      </p>
 
-<p>
-  <%= @post.content.html_safe %>
-</p>
+      <div class="reset-font">
+        <%= @post.content.html_safe %>
+        <%= link_to '', posts_path, :class => "glyphicon glyphicon-arrow-left" %>
+        <span class="mrg-lft-rgt"></span>
+        <% if admin? %>
+          <%= link_to '', edit_post_path(@post), :class => "glyphicon glyphicon-edit"  %>
+        <% end %>
+      </div>
 
-<h3>Comments</h3>
-<div id="comments">
-  <%= render @post.comments %>
-</div>
+      <div class="haze-line"></div>
 
-<h3><a href="#" id="view_comment_form">Add a comment</a></h3>
-<div id="comment_form">
-  <%= render 'comments/form' %>
-</div>
+      <section class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div>
+              <h3 class="twt-clr reset-marg">Comments<span class="gry-clr flt-right reset-font"> <%= @post.comments.count %> replies</span></h3>
+            </div>
+            <div class="dull-line"></div>
+            <div id="comments">
+              <%= render @post.comments %>
+            </div>
 
-<%= link_to 'Back', posts_path %>
-<% if admin? %>
-  <%= link_to 'Edit', edit_post_path(@post) %>
-<% end %>
+            <h4><a href="#" id="view_comment_form" class="comment-lnk">+Comment</a></h4>
+            <div id="comment_form">
+              <%= render 'comments/form' %>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</section>
