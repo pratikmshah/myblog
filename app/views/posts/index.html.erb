@@ -18,11 +18,11 @@
         <% if admin? %>
           <div class="text-center">
             <span>
-                   <%= link_to '', edit_post_path(post), :class => "glyphicon glyphicon-edit" %>
-                   <%= link_to '', post_path(post),
-                                         method: :delete,
-                                         data: { confirm: 'Delete?' },
-                                         :class => "glyphicon glyphicon-remove"%>
+             <%= link_to '', edit_post_path(post), :class => "glyphicon glyphicon-edit" %>
+             <%= link_to '', post_path(post),
+                                   method: :delete,
+                                   data: { confirm: 'Delete?' },
+                                   :class => "glyphicon glyphicon-remove"%>
             </span>
           </div>
         <% end %>
