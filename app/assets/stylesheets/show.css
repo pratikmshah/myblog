@@ -1,7 +1,27 @@
+div .reset-font {
+  font-size: 16px;
+}
+
 .reset-marg {
   margin: 0px;
 }
 
-div .reset-font {
-  font-size: 16px;
+.haze-line{
+  background: linear-gradient(to right,rgba(255,255,255,0),#ccc,rgba(255,255,255,0));
+  height: 1px;
+  margin: 1.5em 0;
+}
+
+.dull-line{
+  background-color: #9EABB3;
+  height: 1px;
+  margin: 1em 0;
+}
+
+.comment-lnk {
+
+}
+
+.twt-clr {
+  color: #55ACEE;
 }
