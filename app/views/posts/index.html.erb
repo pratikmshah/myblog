@@ -10,7 +10,7 @@
     <% @posts.reverse_each do |post| %>
       <div class="block">
         <h3 class="text-center"> <%= post.title %> </h3>
-        <h5 class="text-center"><em class="date"> <%= post.created_at.strftime("%b %d. %Y") %> </em></h5>
+        <h5 class="text-center date"> <%= post.created_at.strftime("%b %d. %Y") %> </h5>
         <p>
           <%= extract_paragraph(post.content) %>
          <div class="text-center"><%= link_to 'READ FULL ARTICLE', post_path(post), :class => "read-lnk" %></div>

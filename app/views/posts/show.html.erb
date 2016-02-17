@@ -1,27 +1,31 @@
 <section class="container">
-  <p>
-    <h5 class="date"> <%= @post.updated_at.strftime("%b %d. %Y") %> </h5>
-    <h1><%= @post.title %></h1>
-  </p>
+  <div class="row">
+    <div class="col-lg-12">
+      <p>
+        <h5 class="date reset-marg"> <%= @post.updated_at.strftime("%b %d. %Y") %> </h5>
+        <h1 class="reset-marg"><%= @post.title %></h1>
+      </p>
 
-  <p>
-    <%= @post.content.html_safe %>
-  </p>
+      <div class="reset-font">
+        <%= @post.content.html_safe %>
+      </div>
 
-  <h3>Comments</h3>
-  <div id="comments">
-    <%= render @post.comments %>
+      <h3>Comments</h3>
+      <div id="comments">
+        <%= render @post.comments %>
+      </div>
+
+      <h3><a href="#" id="view_comment_form">Add a comment</a></h3>
+      <div id="comment_form">
+        <%= render 'comments/form' %>
+      </div>
+
+      <%= link_to '', posts_path, :class => "glyphicon glyphicon-arrow-left" %>
+      <% if admin? %>
+        <%= link_to '', edit_post_path(@post), :class => "glyphicon glyphicon-edit"  %>
+      <% end %>
+    </div>
   </div>
-
-  <h3><a href="#" id="view_comment_form">Add a comment</a></h3>
-  <div id="comment_form">
-    <%= render 'comments/form' %>
-  </div>
-
-  <%= link_to '', posts_path, :class => "glyphicon glyphicon-arrow-left" %>
-  <% if admin? %>
-    <%= link_to '', edit_post_path(@post), :class => "glyphicon glyphicon-edit"  %>
-  <% end %>
 </section>
 
 
