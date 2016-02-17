@@ -1,4 +1,4 @@
-div .reset-font {
+.reset-font {
   font-size: 16px;
 }
 
@@ -21,6 +21,7 @@ div .reset-font {
 .comment-lnk {
 
 }
+
 .comment-box {
  border-bottom: 1px solid #9EABB3;
  margin-bottom: 5px;
@@ -28,4 +29,16 @@ div .reset-font {
 
 .twt-clr {
   color: #55ACEE;
+}
+
+.gry-clr {
+  color: #9EABB3;
+}
+
+.flt-right {
+  float: right;
+}
+
+.flt-left {
+  float: left;
 }

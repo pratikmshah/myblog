@@ -19,7 +19,9 @@
       <section class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
-            <h3 class="twt-clr reset-marg">Comments</h3>
+            <div>
+              <h3 class="twt-clr reset-marg">Comments<span class="gry-clr flt-right reset-font"> <%= @post.comments.count %> replies</span></h3>
+            </div>
             <div class="dull-line"></div>
             <div id="comments">
               <%= render @post.comments %>
