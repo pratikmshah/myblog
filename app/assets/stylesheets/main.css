@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100italic,700,300italic);
 
+/* UTILITY */
+.debug {
+  border: 1px solid red;
+}
+/* END OF UTILITY */
+
 footer {
   min-height: 100px;
 }
@@ -23,6 +29,9 @@ p {
 }
 
 /* CLASSES FOR EACH GRID */
+.grid-container {
+  margin: 0 auto;
+}
 .date {
   font-weight: 300;
   color: #9EABB3;
@@ -32,9 +41,9 @@ p {
   background-color: black;
   color: white;
   display: inline-block;
-  width: 250px;
+  width: 200px;
   padding: 1em;
-  margin: 1em;
+  margin: .25em;
 }
 
 a.read-lnk {
