@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-lg-12">
       <p>
-        <h5 class="date reset-marg"> <%= @post.updated_at.strftime("%b %d. %Y") %> </h5>
+        <h5 class="date reset-marg"> <%= @post.created_at.strftime("%b %d. %Y") %> </h5>
         <h1 class="reset-marg"><%= @post.title %></h1>
       </p>
 

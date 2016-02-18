@@ -1,32 +1,36 @@
-<h1>Editing article</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for :post, url: post_path(@post), method: :patch do |f| %>
 
-<%= form_for :post, url: post_path(@post), method: :patch do |f| %>
-
-  <% if @post.errors.any? %>
-    <div id="error">
-      <h3>
-        <%= pluralize(@post.errors.count, "error") %> caused this article from being saved:
-      </h3>
-      <ul>
-        <% @post.errors.each do |error| %>
-          <li> <%= error %> </li>
+        <% if @post.errors.any? %>
+          <div id="error">
+            <h3>
+              <%= pluralize(@post.errors.count, "error") %> caused this article from being saved:
+            </h3>
+            <ul>
+              <% @post.errors.each do |error| %>
+                <li> <%= error %> </li>
+              <% end %>
+            </ul>
+          </div>
         <% end %>
-      </ul>
+        <p>
+          <%= f.label :title %><br>
+          <%= f.text_field :title, :class => 'form-control' %>
+        </p>
+
+        <p>
+          <%= f.label :content, :class => 'sr-only' %><br>
+          <%= f.text_area :content, :id => 'post_editor' %>
+        </p>
+
+        <p>
+          <%= f.submit 'Save Post', :class => 'btn btn-default form-control' %>
+        </p>
+      <% end %>
+
+      <%= link_to '', posts_path, :class => "glyphicon glyphicon-arrow-left" %>
     </div>
-  <% end %>
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
-
-  <p>
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
-
-<%= link_to 'Back', posts_path %>
+  </div>
+</div>
