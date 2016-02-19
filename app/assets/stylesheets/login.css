@@ -1,4 +1,10 @@
 .form-width {
   max-width: 300px;
-  margin: 100px auto;
+  margin: 0px auto;
+  margin-bottom: 100px;
+  margin-top: 15px;
+}
+
+.login-head-mrgn {
+  margin-top: 85px;
 }
