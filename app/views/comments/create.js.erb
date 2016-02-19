@@ -1,2 +1,2 @@
 $('#comments').append('<%= j render(@comment) %>'); // append comment to bottom of comments list
-$('#comment-count').empty();
+$('#comment-count').empty().text('<%= @post.comments.count %> replies');  // remove text and replace with updated text
