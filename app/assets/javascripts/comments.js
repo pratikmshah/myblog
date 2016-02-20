@@ -31,6 +31,8 @@ $(function(){
     changeFormText(viewCommentForm);                      // toggle link/button text
   });
 
+  // disable button if no name or contents are input
+
 });
 
 /*** Helper Methods Below ***/

@@ -7,9 +7,11 @@
     <%= comment.body.html_safe %>
   </p>
 
-  <p>
-    <%= link_to 'delete', [comment.post, comment],
-                                   method: :delete,
-                                   data: { confirm: 'Delete comment?' } %>
-  </p>
+  <% if admin? %>
+    <p>
+      <%= link_to 'delete', [comment.post, comment],
+                                     method: :delete,
+                                     data: { confirm: 'Delete comment?' } %>
+    </p>
+  <% end %>
 </div>
