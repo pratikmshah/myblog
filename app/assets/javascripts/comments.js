@@ -31,13 +31,6 @@ $(function(){
     changeFormText(viewCommentForm);                      // toggle link/button text
   });
 
-  // disable button if no name or contents are input
-  if ($('textarea').val() != null) {
-    $('#submit_comment').attr('disabled', true);
-  }
-  else {
-    $('#submit_comment').attr('disabled', false);
-  }
 });
 
 /*** Helper Methods Below ***/
