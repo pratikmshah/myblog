@@ -1,5 +1,15 @@
 <div id="comment-<%= comment.id %>" class="comment-box">
+
   <p>
+    <% if admin? %>
+      <span class="">
+        <%= link_to '', [comment.post, comment],
+                                       method: :delete,
+                                       data: { confirm: 'Delete comment?' },
+                                       class: "glyphicon glyphicon-remove pull-right" %>
+      </span>
+    <% end %>
+
     <strong> <%= comment.commenter %> </strong> on
     <span class="twt-clr"> <%= comment.created_at.strftime("%b %d, %l:%M %p") %> </span> said:
   </p>
@@ -8,11 +18,4 @@
     <%= comment.body.html_safe %>
   </p>
 
-  <% if admin? %>
-    <p>
-      <%= link_to 'delete', [comment.post, comment],
-                                     method: :delete,
-                                     data: { confirm: 'Delete comment?' } %>
-    </p>
-  <% end %>
 </div>
