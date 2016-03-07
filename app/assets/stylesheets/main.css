@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100italic,700,300italic);
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
 
 /* UTILITY */
 .debug {
@@ -12,16 +12,16 @@ footer {
 
 a:hover { text-decoration: none; }
 
-h1, h2, h3, h4, h5, h6, p {
-  font-family: 'Roboto';
-}
-
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
+  color: black;
 }
 
 p {
-  font-weight: 100;
+  font-weight: 400;
+  font-size: 1em;
+  color: black;
 }
 
 .glyphicon {
@@ -38,7 +38,7 @@ p {
 }
 
 .block {
-  background-color: black;
+  background-color: white;
   color: white;
   display: inline-block;
   width: 200px;
