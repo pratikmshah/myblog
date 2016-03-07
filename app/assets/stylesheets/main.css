@@ -10,10 +10,6 @@ body {
   background-color: #F4F4F4
 }
 
-footer {
-  min-height: 100px;
-}
-
 a:hover { text-decoration: none; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,6 +22,11 @@ p {
   font-weight: 400;
   font-size: 1em;
   color: black;
+}
+
+footer {
+  min-height: 100px;
+  background-color: black;
 }
 
 .glyphicon {
@@ -73,6 +74,11 @@ a.read-lnk:hover{
   color: red;
 }
 
+.foot-content {
+  color: #999999;
+  font-size: .813em;
+}
+
 .title {
   color: black;
   font-size: 48px;
@@ -96,43 +102,14 @@ a.read-lnk:hover{
 }
 
 /* icons that will interchange pictures on hover */
-.con-em img:last-child {
+.icon-social img:last-child {
   display: none;
 }
-.con-em:hover img:first-child {
+.icon-social:hover img:first-child {
   display: none;
 }
-.con-em:hover img:last-child {
+.icon-social:hover img:last-child {
   display: inline-block;
 }
 
-.con-in img:last-child {
-  display: none;
-}
-.con-in:hover img:first-child {
-  display: none;
-}
-.con-in:hover img:last-child {
-  display: inline-block;
-}
-
-.con-t img:last-child {
-  display: none;
-}
-.con-t:hover img:first-child {
-  display: none;
-}
-.con-t:hover img:last-child {
-  display: inline-block;
-}
-
-.con-gh img:last-child {
-  display: none;
-}
-.con-gh:hover img:first-child {
-  display: none;
-}
-.con-gh:hover img:last-child {
-  display: inline-block;
-}
 /* END OF FOOTER */
