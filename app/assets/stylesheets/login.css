@@ -1,3 +1,7 @@
+#log-user-i { color: black; }
+
+#log-pass-i { color: black; }
+
 .form-width {
   max-width: 300px;
   margin: 0px auto;
@@ -5,6 +9,7 @@
   margin-top: 15px;
 }
 
-.login-head-mrgn {
+.login-title {
   margin-top: 85px;
+  color: black;
 }
