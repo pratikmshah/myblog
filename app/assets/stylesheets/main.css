@@ -34,6 +34,11 @@ footer {
   color: #20FF37;
 }
 
+.glyphicon:hover {
+  color: black;
+}
+
+
 /* CLASSES FOR EACH GRID */
 .grid-container {
   margin: 0 auto;
@@ -76,11 +81,6 @@ a.read-lnk:hover{
   color: red;
 }
 
-.foot-content {
-  color: #999999;
-  font-size: .813em;
-}
-
 .title {
   color: black;
   font-size: 48px;
@@ -92,6 +92,15 @@ a.read-lnk:hover{
 /* END OF HEADER CSS */
 
 /* FOOTER CSS */
+.foot-content {
+  color: #999999;
+  font-size: .813em;
+}
+
+.admin-cntrl:hover {
+  color: white;
+}
+
 .social-lnks {
   list-style: none;
   margin: 5px;

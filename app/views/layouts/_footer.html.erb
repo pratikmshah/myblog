@@ -6,13 +6,13 @@
     </p>
     <div>
       <% if session[:user_id] %>
-        <%= link_to '', :logout, :class => "glyphicon glyphicon-log-out" %>
+        <%= link_to '', :logout, :class => "glyphicon glyphicon-log-out admin-cntrl" %>
       <% else %>
-        <%= link_to '', :login, :class =>"glyphicon glyphicon-user" %>
+        <%= link_to '', :login, :class =>"glyphicon glyphicon-user admin-cntrl" %>
       <% end %>
       <span class="mrg-lft-rgt"></span>
       <% if admin? %>
-        <%= link_to '', new_post_path, :class => "glyphicon glyphicon-file" %>
+        <%= link_to '', new_post_path, :class => "glyphicon glyphicon-file admin-cntrl" %>
       <% end %>
     </div>
     <ul class="social-lnks">
