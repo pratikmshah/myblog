@@ -1,7 +1,7 @@
 <%= form_for([@post, @post.comments.build], remote: true) do |f| %>
   <p>
     <%= f.label :commenter %><br>
-    <%= f.text_field :commenter %>
+    <%= f.text_field :commenter, :class => "input-sm" %>
     <br>
   </p>
 
