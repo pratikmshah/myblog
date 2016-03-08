@@ -31,12 +31,14 @@ footer {
 
 .glyphicon {
   font-size: 1.25em;
+  color: #20FF37;
 }
 
 /* CLASSES FOR EACH GRID */
 .grid-container {
   margin: 0 auto;
 }
+
 .date {
   font-weight: 300;
   color: #9EABB3;
