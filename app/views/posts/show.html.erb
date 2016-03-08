@@ -21,14 +21,14 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <div>
-              <h3 class="twt-clr reset-marg">Comments<span id="comment-count" class="gry-clr flt-right reset-font"> <%= @post.comments.count %> replies</span></h3>
+              <h3 class="reset-marg">Comments<span id="comment-count" class="gry-clr flt-right reset-font"> <%= @post.comments.count %> replies</span></h3>
             </div>
             <div class="dull-line"></div>
             <div id="comments">
               <%= render @post.comments %>
             </div>
 
-            <h4><a href="#" id="view_comment_form" class="comment-lnk">+Comment</a></h4>
+            <h4><a href="#" id="view_comment_form" class="comment-lnk nke-clr">+Comment</a></h4>
             <div id="comment_form">
               <%= render 'comments/form' %>
             </div>

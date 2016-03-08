@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100italic,700,300italic);
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
 
 /* UTILITY */
 .debug {
@@ -6,60 +6,73 @@
 }
 /* END OF UTILITY */
 
-footer {
-  min-height: 100px;
+body {
+  background-color: #F4F4F4
 }
 
 a:hover { text-decoration: none; }
 
-h1, h2, h3, h4, h5, h6, p {
-  font-family: 'Roboto';
-}
-
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
+  color: black;
 }
 
 p {
-  font-weight: 100;
+  font-weight: 400;
+  font-size: 1em;
+  color: black;
+}
+
+footer {
+  min-height: 100px;
+  background-color: black;
 }
 
 .glyphicon {
   font-size: 1.25em;
+  color: #20FF37;
 }
+
+.glyphicon:hover {
+  color: black;
+}
+
 
 /* CLASSES FOR EACH GRID */
 .grid-container {
   margin: 0 auto;
 }
+
 .date {
   font-weight: 300;
   color: #9EABB3;
 }
 
 .block {
-  background-color: black;
+  background-color: white;
   color: white;
   display: inline-block;
-  width: 200px;
+  width: 300px;
   padding: 1em;
-  margin: .25em;
+  margin: .4em;
 }
 
 a.read-lnk {
+  -webkit-transition-duration: 0.75s;
+  transition-duration: 0.75s;
   text-decoration: none;
   margin-top: 5px;
   padding: 5px;
   font-size: 12px;
-  color: white;
-  border: 1px solid #55ACEE;
-  background-color: #55ACEE;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
 }
 
 a.read-lnk:hover{
   background-color: black;
-  border: 1px solid #55ACEF;
-  color: #55ACEF;
+  color: white;
 }
 
 /* END OF GRID */
@@ -70,17 +83,42 @@ a.read-lnk:hover{
 }
 
 .title {
-  color: #55ACEE;
+  color: black;
   font-size: 48px;
+}
+
+.title:hover {
+  color: black;
 }
 /* END OF HEADER CSS */
 
 /* FOOTER CSS */
+
+.foot-content {
+  color: #999999;
+  font-size: .813em;
+}
+
+.admin-cntrl:hover {
+  color: white;
+}
+
+.social-cont {
+  width: 100%;
+  min-height: 65px;
+}
+
+.social-title {
+  color: white;
+  padding-right: 13px;
+}
+
 .social-lnks {
   list-style: none;
   margin: 5px;
   padding: 0px;
 }
+
 .social-lnks li {
   display: inline;
   list-style-type: none;
@@ -88,43 +126,14 @@ a.read-lnk:hover{
 }
 
 /* icons that will interchange pictures on hover */
-.con-em img:last-child {
+.icon-social img:last-child {
   display: none;
 }
-.con-em:hover img:first-child {
+.icon-social:hover img:first-child {
   display: none;
 }
-.con-em:hover img:last-child {
+.icon-social:hover img:last-child {
   display: inline-block;
 }
 
-.con-in img:last-child {
-  display: none;
-}
-.con-in:hover img:first-child {
-  display: none;
-}
-.con-in:hover img:last-child {
-  display: inline-block;
-}
-
-.con-t img:last-child {
-  display: none;
-}
-.con-t:hover img:first-child {
-  display: none;
-}
-.con-t:hover img:last-child {
-  display: inline-block;
-}
-
-.con-gh img:last-child {
-  display: none;
-}
-.con-gh:hover img:first-child {
-  display: none;
-}
-.con-gh:hover img:last-child {
-  display: inline-block;
-}
 /* END OF FOOTER */

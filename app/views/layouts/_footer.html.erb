@@ -1,38 +1,55 @@
 <footer>
-  <div class="text-center">
-    <hr>
-    <p>
-      Copyright Pratik Shah © 2016
-    </p>
-    <div>
-      <% if session[:user_id] %>
-        <%= link_to '', :logout, :class => "glyphicon glyphicon-log-out" %>
-      <% else %>
-        <%= link_to '', :login, :class =>"glyphicon glyphicon-user" %>
-      <% end %>
-      <span class="mrg-lft-rgt"></span>
-      <% if admin? %>
-        <%= link_to '', new_post_path, :class => "glyphicon glyphicon-file" %>
-      <% end %>
+  <div class="container">
+    <div class="row">
+      <section class="col-xs-10 col-xs-offset-1">
+        <aside class="social-cont">
+          <div class="pull-right">
+            <h5 class="social-title text-right">SOCIAL</h5>
+            <ul class="social-lnks">
+              <li><a href="#" class="icon-social">
+                  <%= image_tag('icons/twt-blk.png', :size => "22x22") %>
+                  <%= image_tag('icons/twt-clr.png', :size => "22x22") %>
+              </a></li>
+              <li><a href="#" class="icon-social">
+                  <%= image_tag('icons/insta-blk.png', :size => "22x22") %>
+                  <%= image_tag('icons/insta-clr.png', :size => "22x22") %>
+              </a></li>
+              <li><a href="#" class="icon-social">
+                  <%= image_tag('icons/github-blk.png', :size => "22x22") %>
+                  <%= image_tag('icons/github-clr.png', :size => "22x22") %>
+              </a></li>
+              <li><a href="#" class="icon-social">
+                  <%= image_tag('icons/lnkdn-blk.png', :size => "22x22") %>
+                  <%= image_tag('icons/lnkdn-clr.png', :size => "22x22") %>
+              </a></li>
+              <li><a href="#" class="icon-social">
+                  <%= image_tag('icons/email-blk.png', :size => "22x22") %>
+                  <%= image_tag('icons/email-clr.png', :size => "22x22") %>
+              </a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <div class="haze-line clearfix"></div>
+
+        <aside>
+          <div class="pull-left">
+            <p class="text-left foot-content">© 2016 Pratik Shah</p>
+          </div>
+          <div class="pull-right">
+            <% if session[:user_id] %>
+              <%= link_to '', :logout, :class => "glyphicon glyphicon-log-out admin-cntrl" %>
+            <% else %>
+              <%= link_to '', :login, :class =>"glyphicon glyphicon-user admin-cntrl" %>
+            <% end %>
+            <span class="mrg-lft-rgt"></span>
+            <% if admin? %>
+              <%= link_to '', new_post_path, :class => "glyphicon glyphicon-file admin-cntrl" %>
+            <% end %>
+          </div>
+        </aside>
+      </section>
     </div>
-    <ul class="social-lnks">
-      <li><a href="https://twitter.com/pratikshah" class="con-t">
-          <%= image_tag('icons/twt.png', :size => "22x22") %>
-          <%= image_tag('icons/tweet.png', :size => "22x22") %>
-      </a></li>
-      <li><a href="https://www.linkedin.com/in/pratikmshah" class="con-in">
-          <%= image_tag('icons/in.png', :size => "22x22") %>
-          <%= image_tag('icons/lnkin.png', :size => "22x22") %>
-      </a></li>
-      <li><a href="https://github.com/pratikmshah" class="con-gh">
-          <%= image_tag('icons/git.png', :size => "22x22") %>
-          <%= image_tag('icons/cat.png', :size => "22x22") %>
-      </a></li>
-      <li><a href="mailto:pratik.t.shah@gmail.com?Subject=Hello" class="con-em">
-          <%= image_tag('icons/email.png', :size => "22x22") %>
-          <%= image_tag('icons/mail.png', :size => "22x22") %>
-      </a></li>
-    </ul>
   </div>
 </footer>
 
